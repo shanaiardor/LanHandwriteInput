@@ -1,5 +1,5 @@
 #define MyAppName "局域网手写输入"
-#define MyAppVersion "0.1.0"
+#define MyAppVersion "0.0.1"
 #define MyAppExeName "LanHandwriteInput.exe"
 
 [Setup]

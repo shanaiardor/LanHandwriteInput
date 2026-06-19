@@ -19,7 +19,7 @@
 
 ## 💡 使用场景
 
-用 [GoldenDict](https://github.com/goldendict/goldendict) 阅读古籍、佛经、文言文时，经常碰到**不认识、也不会打**的繁体字或异体字（比如「𠮷」「𪚥」「𨰻」）。
+用 [GoldenDict](https://github.com/goldendict/goldendict) 阅读古籍、文言文时，经常碰到**不认识、也不会打**的繁体字或异体字（比如「𠮷」「𪚥」「𨰻」）。
 
 传统做法：打开手机手写输入 → 搜字 → 再手动敲进 GoldenDict → 来回切换很麻烦。
 
