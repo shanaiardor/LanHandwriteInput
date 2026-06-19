@@ -13,6 +13,7 @@ namespace LanHandwriteInput
         private readonly int _port;
         private readonly Action<string> _onTextReceived;
         private WebApplication? _app;
+        private int _isDisposed;
 
         public LocalWebServer(int port, Action<string> onTextReceived)
         {
@@ -79,14 +80,43 @@ namespace LanHandwriteInput
 
         public void Dispose()
         {
-            if (_app is null)
+            if (Interlocked.Exchange(ref _isDisposed, 1) == 1)
             {
                 return;
             }
 
-            _app.StopAsync(TimeSpan.FromSeconds(2)).GetAwaiter().GetResult();
-            _app.DisposeAsync().AsTask().GetAwaiter().GetResult();
+            var app = _app;
             _app = null;
+
+            if (app is null)
+            {
+                return;
+            }
+
+            app.Lifetime.StopApplication();
+            _ = Task.Run(() => DisposeAppAsync(app));
+        }
+
+        private static async Task DisposeAppAsync(WebApplication app)
+        {
+            try
+            {
+                using var cancellation = new CancellationTokenSource(TimeSpan.FromSeconds(1));
+                await app.StopAsync(cancellation.Token).ConfigureAwait(false);
+            }
+            catch
+            {
+                // The process is closing; avoid blocking the UI on server shutdown.
+            }
+
+            try
+            {
+                await app.DisposeAsync().ConfigureAwait(false);
+            }
+            catch
+            {
+                // Best-effort cleanup during application exit.
+            }
         }
 
         private sealed record SendTextRequest(string? Text);
