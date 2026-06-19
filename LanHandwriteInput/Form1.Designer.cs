@@ -18,9 +18,11 @@ namespace LanHandwriteInput
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(760, 560);
-            MinimumSize = new Size(680, 520);
+            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleMode = AutoScaleMode.Dpi;
+            AutoScroll = true;
+            ClientSize = new Size(820, 620);
+            MinimumSize = new Size(720, 560);
             StartPosition = FormStartPosition.CenterScreen;
             Text = "局域网手写输入";
         }
