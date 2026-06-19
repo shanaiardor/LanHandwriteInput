@@ -9,6 +9,8 @@ namespace LanHandwriteInput
             if (disposing)
             {
                 _server?.Dispose();
+                _qrToastForm?.Dispose();
+                _qrCodeImage?.Dispose();
                 components?.Dispose();
             }
 

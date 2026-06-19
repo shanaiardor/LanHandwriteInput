@@ -61,4 +61,12 @@ finally {
     Pop-Location
 }
 
-Write-Host "Installer created in: $installerPath"
+$installerFile = Get-ChildItem -Path $installerPath -Filter "*.exe" | Select-Object -First 1
+if ($installerFile) {
+    Copy-Item -Path $installerFile.FullName -Destination $scriptRoot -Force
+    Write-Host "Installer created in: $installerPath"
+    Write-Host "Copied to: $(Join-Path $scriptRoot $installerFile.Name)"
+}
+else {
+    throw "No installer .exe found in $installerPath"
+}

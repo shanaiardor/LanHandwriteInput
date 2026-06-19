@@ -12,6 +12,7 @@ DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
 OutputDir=artifacts\installer
 OutputBaseFilename=LanHandwriteInput-Setup-{#MyAppVersion}
+SetupIconFile=LanHandwriteInput\assets\app-logo.ico
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern
