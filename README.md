@@ -45,7 +45,7 @@ GoldenDict 弹出释义 ✅
 
 ## 🚀 快速开始
 
-1. **[下载安装包](https://github.com/shanaiardor/LanHandwriteInput/releases/latest/download/LanHandwriteInput-Setup-0.1.0.exe)**，双击安装。
+1. **[下载安装包](https://github.com/shanaiardor/LanHandwriteInput/releases/download/v0.01/LanHandwriteInput-Setup-0.0.1.exe)**，双击安装。
 2. 启动程序，桌面右下角出现托盘图标。
 3. 手机和电脑连接**同一个 Wi-Fi**。
 4. 打开 GoldenDict，**把光标点到搜索框里**。
@@ -75,7 +75,7 @@ GoldenDict 弹出释义 ✅
 
 ### 安装包（推荐）
 
-**[📦 LanHandwriteInput-Setup-0.1.0.exe](https://github.com/shanaiardor/LanHandwriteInput/releases/latest/download/LanHandwriteInput-Setup-0.1.0.exe)**
+**[📦 LanHandwriteInput-Setup-0.0.1.exe](https://github.com/shanaiardor/LanHandwriteInput/releases/download/v0.01/LanHandwriteInput-Setup-0.0.1.exe)**
 
 - Windows 10 / 11 x64
 - 安装后开始菜单 / 桌面快捷方式
